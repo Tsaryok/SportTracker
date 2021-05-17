@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">SportTracker</string>
+    <string name="title_activity_maps">SportTracker</string>
+
+    <!--ViewPager Menu-->
+    <string name="monitoring">Monitoring</string>
+    <string name="plan">Plan</string>
+
+    <string name="track_choose">Track Name</string>
+
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="finish">Finish</string>
+    <string name="restart">Restart</string>
+
+    <string name="track_name">Track name</string>
+
+    <string name="looped">Looped</string>
+
+    <string name="speed">Speed, km/h</string>
+
+    <!--Navigation Menu-->
+    <string name="title_track">Track</string>
+    <string name="title_training">Training</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>

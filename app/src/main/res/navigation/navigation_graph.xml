@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/trackListFragment">
+
+    <fragment
+        android:id="@+id/trackListFragment"
+        android:name="by.bsuir.sporttracker.view.tracklist.TrackListFragment"
+        android:label="fragment_track_list"
+        tools:layout="@layout/fragment_track_list" >
+        <action
+            android:id="@+id/action_trackListFragment_to_newTrackFragment"
+            app:destination="@id/newTrackFragment" />
+        <action
+            android:id="@+id/action_trackListFragment_to_trackFragment"
+            app:destination="@id/trackFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newTrackFragment"
+        android:name="by.bsuir.sporttracker.view.newtrack.NewTrackFragment"
+        android:label="fragment_new_track"
+        tools:layout="@layout/fragment_new_track" >
+    </fragment>
+    <fragment
+        android:id="@+id/trackFragment"
+        android:name="by.bsuir.sporttracker.view.TrackFragment"
+        android:label="fragment_track"
+        tools:layout="@layout/fragment_track" >
+        <argument
+            android:name="id"
+            app:argType="long" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="isLooped"
+            app:argType="boolean" />
+        <argument
+            android:name="pointString"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_trackFragment_to_planListFragment"
+            app:destination="@id/planListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/planListFragment"
+        android:name="by.bsuir.sporttracker.view.planlist.PlanListFragment"
+        android:label="fragment_plan_list"
+        tools:layout="@layout/fragment_plan_list" >
+        <argument
+            android:name="id"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_planListFragment_to_planFragment"
+            app:destination="@id/planFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/planFragment"
+        android:name="by.bsuir.sporttracker.view.plan.PlanFragment"
+        android:label="PlanFragment"
+        tools:layout="@layout/fragment_plan" >
+        <argument
+            android:name="id"
+            app:argType="long" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="trackId"
+            app:argType="long" />
+        <argument
+            android:name="sectionString"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
